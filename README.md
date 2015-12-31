@@ -7,7 +7,7 @@ Why? Well, maybe you deleted your save, maybe the Steam Cloud integration delete
 
 ## Running it (for normal people)
 
-Download the release for your platform, extract the .ZIP and run the `ntunlocker` -file in it. It will look something like this:
+Download the [release](https://github.com/lietu/ntunlock/releases) for your platform, extract the .ZIP and run the `ntunlocker` -file in it. It will look something like this:
 
 ![NTUnlock Screenshot](screenshot.jpg?raw=true)
 
