@@ -35,6 +35,16 @@ var AllCrowns []float32 = []float32{
 	1.000000,
 }
 
+func FixCharacter(c *Character, weapon float32) {
+	if c.Cwep == 0.0 {
+		c.Cwep = weapon
+	}
+
+	if c.Startcrown == 0.0 {
+		c.Startcrown = 1.0
+	}
+}
+
 func Edit(save *Save, settings *EditSettings) {
 	if settings.UnlockAllCharacters {
 		save.Stats.Chicken.Cgot = 1.0
@@ -49,6 +59,20 @@ func Edit(save *Save, settings *EditSettings) {
 		save.Stats.Rogue.Cgot = 1.0
 		save.Stats.Steroids.Cgot = 1.0
 		save.Stats.YV.Cgot = 1.0
+
+		// Also set starting weapon and crown for all characters
+		FixCharacter(save.Stats.Chicken, 46) // Chicken sword
+		FixCharacter(save.Stats.Crystal, 1)
+		FixCharacter(save.Stats.Eyes, 1)
+		FixCharacter(save.Stats.Fish, 1)
+		FixCharacter(save.Stats.Horror, 1)
+		FixCharacter(save.Stats.Melting, 1)
+		FixCharacter(save.Stats.Plant, 1)
+		FixCharacter(save.Stats.Rebel, 1)
+		FixCharacter(save.Stats.Robot, 1)
+		FixCharacter(save.Stats.Rogue, 81) // Rogue rifle
+		FixCharacter(save.Stats.Steroids, 1)
+		FixCharacter(save.Stats.YV, 39) // Golden revolver
 	}
 
 	if settings.UnlockBSkins {
